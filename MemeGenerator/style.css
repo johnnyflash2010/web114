@@ -1,0 +1,124 @@
+/* John Griffith 
+* Created 12/06/2025
+*/
+
+/* Basic page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #1f2933;
+    color: #f9fafb;
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    text-align: center;
+    padding: 1.5rem;
+    background: #111827;
+    border-bottom: 2px solid #4b5563;
+
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: row;
+    /* Side-by-side */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    /* Space between the two panels */
+    padding: 20px;
+}
+
+/* Controls section */
+#controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+#controls label {
+    font-weight: bold;
+}
+
+#controls input {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #9ca3af;
+}
+
+#generateBtn {
+    margin-top: 0.5rem;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 4px;
+    background: #1eb910;
+    color: #111827;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s ease, background 0.2s ease;
+}
+
+#generateBtn:hover {
+    background: #05963d;
+    transform: translateY(-1px);
+}
+
+/* Meme display area */
+#meme-area {
+    display: flex;
+    justify-content: center;
+}
+
+#meme-container {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+}
+
+#meme-image {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+}
+
+/* Text overlay */
+.meme-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: 900;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    width: 90%;
+    /* "Outline" effect */
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    pointer-events: none;
+}
+
+.meme-text.top {
+    top: 8%;
+}
+
+.meme-text.bottom {
+    bottom: 8%;
+
+}
