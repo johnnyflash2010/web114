@@ -1,0 +1,54 @@
+<!--John Griffith 
+Created 12/5/2025-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Meme Generator</h1>
+        <p>by John Griffith</p>
+        <hr>
+        <p>Create a random meme with your own top and/or bottom text.</p>
+    </header>
+
+    <main>
+        <!-- Controls / inputs -->
+        <section id="controls">
+            <label for="topTextInput">Top Text:</label>
+            <input type="text" id="topTextInput" placeholder="Enter top text">
+
+            <label for="bottomTextInput">Bottom Text:</label>
+            <input type="text" id="bottomTextInput" placeholder="Enter bottom text">
+
+            <button id="generateBtn">Apply Text</button>
+            <button id="refreshBtn">Next Random Image</button>
+            <button id="saveBtn">Save Meme</button>
+            <button id="uploadBtn">Upload image (coming soon)</button>
+
+            <p id="message"></p>
+        </section>
+
+        <!-- Meme display area -->
+        <section id="meme-area">
+            <div id="meme-container">
+                <!-- Start with a default image -->
+                <img id="meme-image" src="images/grumpyCat.jpg" alt="Random meme image">
+
+                <!-- Text overlays -->
+                <div class="meme-text top" id="meme-top-text">TOP TEXT</div>
+                <div class="meme-text bottom" id="meme-bottom-text">BOTTOM TEXT</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
